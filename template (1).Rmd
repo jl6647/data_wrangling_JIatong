@@ -1,16 +1,17 @@
 ---
-title: "Simple document"
+title: "Tidy data"
 output: github_document
 
 ---
 
-Let's import the `FAS_litters.csv` CSV
 ```{r}
 library(tidyverse)
-litters_df = 
-  read_csv("data/data_import_examples/FAS_litters.csv")
+```
 
-litters_df =
-  janitor::clean_names(litters_df)
+## PULSE data
+```{r}
+pulse_df = 
+  haven::read_sas("data/public_pulse_data.sas7bdat")
+  
 ```
 
